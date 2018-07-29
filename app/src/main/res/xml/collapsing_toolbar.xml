@@ -10,6 +10,28 @@
       app:dragDirection="dragUp"
       app:touchAnchorId="@id/recyclerview"
       app:touchAnchorSide="top" />
+
+    <KeyFrameSet>
+      <KeyAttribute
+        app:framePosition="60"
+        app:target="@id/toolbar_image">
+        <CustomAttribute
+          app:attributeName="imageAlpha"
+          app:customIntegerValue="255" />
+      </KeyAttribute>
+      <KeyAttribute
+        app:framePosition="90"
+        app:target="@id/toolbar_image">
+        <CustomAttribute
+          app:attributeName="imageAlpha"
+          app:customIntegerValue="0" />
+      </KeyAttribute>
+      <KeyPosition
+        app:type="pathRelative"
+        app:framePosition="50"
+        app:target="@id/title"
+        app:percentX="0.9" />
+    </KeyFrameSet>
   </Transition>
 
   <ConstraintSet android:id="@+id/expanded">
@@ -18,11 +40,7 @@
       android:layout_height="200dp"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent">
-      <CustomAttribute
-        app:attributeName="imageAlpha"
-        app:customIntegerValue="255" />
-    </Constraint>
+      app:layout_constraintTop_toTopOf="parent" />
     <Constraint
       android:id="@id/title"
       android:layout_width="wrap_content"
@@ -41,11 +59,7 @@
       android:layout_height="?attr/actionBarSize"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent">
-      <CustomAttribute
-        app:attributeName="imageAlpha"
-        app:customIntegerValue="0" />
-    </Constraint>
+      app:layout_constraintTop_toTopOf="parent" />
     <Constraint
       android:id="@id/title"
       android:layout_marginStart="20dp"

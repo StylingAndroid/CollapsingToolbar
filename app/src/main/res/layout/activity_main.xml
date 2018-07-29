@@ -6,7 +6,8 @@
   android:layout_height="match_parent"
   app:layoutDescription="@xml/collapsing_toolbar"
   tools:context=".MainActivity"
-  tools:showPaths="true">
+  tools:showPaths="true"
+  app:showPaths="true">
 
   <androidx.recyclerview.widget.RecyclerView
     android:id="@+id/recyclerview"
