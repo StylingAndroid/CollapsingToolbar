@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+  <issue id="IconMissingDensityFolder">
+    <ignore path="src/main/res" />
+  </issue>
+  <issue id="IconLauncherShape">
+    <ignore regexp=".*_background.png" />
+  </issue>
+</lint>

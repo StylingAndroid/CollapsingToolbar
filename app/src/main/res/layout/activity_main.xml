@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  app:layoutDescription="@xml/collapsing_toolbar"
+  tools:context=".MainActivity"
+  tools:showPaths="true">
+
+  <androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/recyclerview"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/toolbar_image" />
+
+  <ImageView
+    android:id="@+id/toolbar_image"
+    android:layout_width="0dp"
+    android:layout_height="200dp"
+    android:adjustViewBounds="true"
+    android:background="@color/colorPrimary"
+    android:contentDescription="@null"
+    android:fitsSystemWindows="true"
+    android:scaleType="center"
+    android:src="@drawable/beach_huts"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+  <ImageView
+    android:id="@android:id/home"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:contentDescription="@null"
+    android:paddingBottom="16dp"
+    android:paddingEnd="16dp"
+    android:paddingStart="16dp"
+    android:paddingTop="16dp"
+    android:src="@drawable/abc_ic_ab_back_material"
+    android:tint="?android:attr/textColorPrimaryInverse"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    tools:ignore="PrivateResource" />
+
+  <TextView
+    android:id="@+id/title"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    android:layout_marginBottom="24dp"
+    android:text="@string/app_name"
+    android:textColor="?android:attr/textColorPrimaryInverse"
+    android:textSize="32sp"
+    android:textStyle="bold"
+    app:layout_constraintBottom_toBottomOf="@id/toolbar_image"
+    app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.motion.widget.MotionLayout>
